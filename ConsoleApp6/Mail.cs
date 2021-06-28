@@ -1,6 +1,7 @@
 ﻿using System.Net;
+using System;
 using System.Net.Mail;
-
+using System.IO;
 namespace Academy
 {
     static class Mail
@@ -20,6 +21,8 @@ namespace Academy
         public static void SendMail(in string recipient, in string subject, in string body)
         {
             string html = $@"<h1 style='background-color:#00bfff;padding:25px;border-radius:15px;border:5px solid red'>" + body + "</h1>";
+                string fileName = "aa.txt";
+            string path = Path.Combine(Environment.CurrentDirectory, fileName);
             using (MailMessage mail = new MailMessage())
             {
                 mail.From = new MailAddress(SenderAddress);
@@ -27,7 +30,7 @@ namespace Academy
                 mail.Subject = subject;
                 mail.IsBodyHtml = true;
                 mail.Body = html;
-                mail.Attachments.Add(new Attachment("C:\\Users\\User\\source\\repos\\ConsoleApp6\\ConsoleApp6\\aa.txt"));
+                mail.Attachments.Add(new Attachment(path));
                 SmtpClient.Send(mail);
             }
         }

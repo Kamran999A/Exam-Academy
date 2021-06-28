@@ -36,18 +36,7 @@ namespace Academy
                 score = scores[3],
                 ExamTime = new DateTime(2021, 06, 20, 14, 00, 00)
             };
-            Exam exam5 = new Exam
-            {
-                lesson = "C++",
-                score = scores[4],
-                ExamTime = new DateTime(2021, 06, 20, 14, 50, 00)
-            };
-            Exam exam6 = new Exam
-            {
-                lesson = "C++",
-                score = scores[5],
-                ExamTime = new DateTime(2021, 06, 20, 15, 30, 00)
-            };
+          
             Student student1 = new Student
             {
                 ID = Guid.NewGuid(),
@@ -84,24 +73,7 @@ namespace Academy
                 Email = "ruslanmustafayevaydin2000@gmail.com",
                 exam = exam4
             };
-            Student student5 = new Student
-            {
-                ID = Guid.NewGuid(),
-                Name = "Apo",
-                Surname = "Babacan",
-                Age = 24,
-                Email = "ruslanmustafayevaydin2000@gmail.com",
-                exam = exam5
-            };
-            Student student6 = new Student
-            {
-                ID = Guid.NewGuid(),
-                Name = "Berfin",
-                Surname = "Rojda",
-                Age = 19,
-                Email = "ruslanmustafayevaydin2000@gmail.com",
-                exam = exam6
-            };
+           
             Group group1 = new Group
             {
                 GroupName = "2201",
@@ -109,15 +81,14 @@ namespace Academy
             };
             group1.AddStudent(ref student1);
             group1.AddStudent(ref student2);
-            group1.AddStudent(ref student3);
             Group group2 = new Group
             {
                 GroupName = "2207",
                 Tutor = "Pervane",
             };
+            group2.AddStudent(ref student3);
             group2.AddStudent(ref student4);
-            group2.AddStudent(ref student5);
-            group2.AddStudent(ref student6);
+           
             Teacher teacher1 = new Teacher
             {
                 TeacherName = "Elvin Camalzade",

@@ -33,6 +33,8 @@ namespace Academy
             {
                 if (gr.GroupName == group_name)
                 {
+                    string fileName = "aa.txt";
+                    string path = Path.Combine(Environment.CurrentDirectory, fileName);
                     string txt1 = "Exam begin !!! ";
                     int count = 3;
                     while (count != 0)
@@ -58,7 +60,7 @@ namespace Academy
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("Congratulation");
                             Thread.Sleep(870);
-                            File.AppendAllText("C:\\Users\\User\\source\\repos\\ConsoleApp6\\ConsoleApp6\\aa.txt", $" Name : { st.Name}, Surame : { st.Surname},  score is { st.exam.score }, {st.exam.ExamTime}\n");
+                            File.AppendAllText(path, $" Name : { st.Name}, Surame : { st.Surname},  score is { st.exam.score }, {st.exam.ExamTime}\n");
                             Thread.Sleep(870);
                             Mail.SendMail(st.Email, $"Dear student {st.Name}", $"Dear student {st.Name} your score is {st.exam.score}");
                         }
@@ -68,7 +70,8 @@ namespace Academy
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("Congratulation");
                             Thread.Sleep(870);
-                            File.AppendAllText("C:\\Users\\User\\source\\repos\\ConsoleApp6\\ConsoleApp6\\aa.txt", $" Name : { st.Name}, Surame : { st.Surname},  score is { st.exam.score }, {st.exam.ExamTime}\n");
+                            
+                            File.AppendAllText(path, $" Name : { st.Name}, Surame : { st.Surname},  score is { st.exam.score }, {st.exam.ExamTime}\n");
                             Thread.Sleep(870);
                             Mail.SendMail(st.Email, $"Dear student {st.Name}", $"Dear student {st.Name} your score is {st.exam.score}");
                         }
@@ -78,7 +81,7 @@ namespace Academy
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("Congratulation");
                             Thread.Sleep(870);
-                            File.AppendAllText("C:\\Users\\User\\source\\repos\\ConsoleApp6\\ConsoleApp6\\aa.txt", $" Name : { st.Name}, Surame : { st.Surname},  score is { st.exam.score }, {st.exam.ExamTime}\n");
+                            File.AppendAllText(path, $" Name : { st.Name}, Surame : { st.Surname},  score is { st.exam.score }, {st.exam.ExamTime}\n");
                             Thread.Sleep(870);
                             Mail.SendMail(st.Email, $"Dear student {st.Name}", $"Dear student {st.Name} your score is {st.exam.score}");
                         }
@@ -88,7 +91,7 @@ namespace Academy
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("Congratulation");
                             Thread.Sleep(870);
-                            File.AppendAllText("C:\\Users\\User\\source\\repos\\ConsoleApp6\\ConsoleApp6\\aa.txt", $" Name : { st.Name}, Surame : { st.Surname},  score is { st.exam.score }, {st.exam.ExamTime}\n");
+                            File.AppendAllText(path, $" Name : { st.Name}, Surame : { st.Surname},  score is { st.exam.score }, {st.exam.ExamTime}\n");
                             Thread.Sleep(870);
                             Mail.SendMail(st.Email, $"Dear student {st.Name}", $"Dear student {st.Name} your score is {st.exam.score}");
                         }
@@ -98,7 +101,7 @@ namespace Academy
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("Congratulation");
                             Thread.Sleep(870);
-                            File.AppendAllText("C:\\Users\\User\\source\\repos\\ConsoleApp6\\ConsoleApp6\\aa.txt", $" Name : { st.Name}, Surame : { st.Surname},  score is { st.exam.score }, {st.exam.ExamTime}\n");
+                            File.AppendAllText(path, $" Name : { st.Name}, Surame : { st.Surname},  score is { st.exam.score }, {st.exam.ExamTime}\n");
                             Thread.Sleep(870);
                             Mail.SendMail(st.Email, $"Dear student {st.Name}", $"Dear student {st.Name} your score is {st.exam.score}");
                         }
@@ -108,7 +111,7 @@ namespace Academy
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine($"Sorry,You failed from {lesson_name} exam :( good luck for future exam ");
                             Thread.Sleep(870);
-                            File.AppendAllText("C:\\Users\\User\\source\\repos\\ConsoleApp6\\ConsoleApp6\\aa.txt", $" Name : { st.Name}, Surame : { st.Surname},  score is { st.exam.score }, {st.exam.ExamTime}\n");
+                            File.AppendAllText(path, $" Name : { st.Name}, Surame : { st.Surname},  score is { st.exam.score }, {st.exam.ExamTime}\n");
                             Thread.Sleep(870);
                             Mail.SendMail(st.Email, $"Dear student {st.Name}", $"Dear student {st.Name} your score is {st.exam.score} Please Study Carefully ");
                         }
